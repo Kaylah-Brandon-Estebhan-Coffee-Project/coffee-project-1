@@ -29,20 +29,20 @@ function renderCoffees(coffees) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 
 
-
     }
+    var filteredCoffeeList = updateCoffees;
  function updateCoffeeListByName(){
-
-// Declare variables
+//
+// // Declare variables
 var input, filter, coffeeList, coffee, a, i, txtValue;
 input = document.getElementById('search-bar');
 filter = input.value.toUpperCase();
-coffeeList = filteredCoffees;
+coffeeList = filteredCoffeeList;
 coffee = coffeeList.getElementsByTagName('h2');
 
 // Loop through all list items, and hide those who don't match the search query
 for (i = 0; i < coffee.length; i++) {
-    a = coffee[i].getElementsByTagName("a")[0];
+    a = coffee[i];
     txtValue = a.textContent || a.innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
         coffee[i].style.display = "";
@@ -77,3 +77,4 @@ var nameSelector= document.querySelector('#search-bar')
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+document.getElementById('search-bar').addEventListener('keyup',updateCoffeeListByName);
