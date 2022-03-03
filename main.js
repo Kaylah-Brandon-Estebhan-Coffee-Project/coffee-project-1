@@ -33,25 +33,41 @@ function renderCoffees(coffees) {
     var filteredCoffeeList = updateCoffees;
 
  function updateCoffeeListByName(){
-//
-// // Declare variables
-var input, filter, coffeeList, coffee, a, i, txtValue;
-input = document.getElementById('search-bar');
-filter = input.value.toUpperCase();
-coffeeList = filteredCoffeeList;
-coffee = coffeeList.getElementsByClassName('coffee').getElementsByTagName('h2');
+     let input = document.getElementById('search-bar').value
+     input=input.toLowerCase();
+     let x = document.getElementsByTagName('h2');
+     let y = document.getElementsByTagName('p');
 
-// Loop through all list items, and hide those who don't match the search query
-for (i = 0; i < coffee.length; i++) {
-    a = coffee[i];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        coffee[i].style.display = "";
-    } else {
-        coffee[i].style.display = "none";
-    }
-}
-}
+     for (var i = 0; i < x.length; i++) {
+         if (!x[i].innerHTML.toLowerCase().includes(input)) {
+             x[i].style.display="none";
+             y[i].style.display='none';
+         }
+         else {
+             x[i].style.display="";
+             y[i].style.display="";
+         }
+     }
+ }
+// //
+// // // Declare variables
+// var input, filter, coffeeList, coffee, a, i, txtValue;
+// input = document.getElementById('search-bar');
+// filter = input.value.toUpperCase();
+// coffeeList = filteredCoffeeList;
+// coffee = coffeeList.getElementsByClassName('coffee').getElementsByTagName('h2');
+//
+// // Loop through all list items, and hide those who don't match the search query
+// for (i = 0; i < coffee.length; i++) {
+//     a = coffee[i];
+//     txtValue = a.textContent || a.innerText;
+//     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//         coffee[i].style.display = "";
+//     } else {
+//         coffee[i].style.display = "none";
+//     }
+// }
+// }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [

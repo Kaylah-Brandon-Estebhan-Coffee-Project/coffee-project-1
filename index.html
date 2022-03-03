@@ -20,10 +20,9 @@
             <option>medium</option>
             <option>dark</option>
         </select>
-    <form>
-        <input type="text" id="search-bar" placeholder="Search for names..">
+        <input type="text" id="search-bar" onkeyup="updateCoffeeListByName()" placeholder="Search for names..">
         <input id="submit" type="submit" />
-    </form>
+
         </form>
     </div>
         <div class="col-6 row flex-wrap justify-content-between" id="coffees"></div>

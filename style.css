@@ -12,7 +12,6 @@ td, th {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: hotpink;
 }
 
 h2 {
