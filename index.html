@@ -12,17 +12,19 @@
     <h1 style ="text-align: center">Coffee!</h1>
     <hr>
 <div class="d-flex">
-    <div class="order-6 col-6">
-    <form>
+    <div class="order-6 col-6 ">
+    <form class="d-flex flex-column">
         <label for="roast-selection"></label>
-        <select id="roast-selection">
+        <select id="roast-selection" class="text-center">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
+    <form>
         <input type="text" id="search-bar" placeholder="Search for names..">
         <input id="submit" type="submit" />
     </form>
+        </form>
     </div>
         <div class="col-6 row flex-wrap justify-content-between" id="coffees"></div>
 </div>

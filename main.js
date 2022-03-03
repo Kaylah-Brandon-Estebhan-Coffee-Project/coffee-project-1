@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee d-flex">';
+    var html = '<div class="coffee d-flex col-6">';
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
@@ -31,6 +31,7 @@ function renderCoffees(coffees) {
 
     }
     var filteredCoffeeList = updateCoffees;
+
  function updateCoffeeListByName(){
 //
 // // Declare variables
@@ -38,7 +39,7 @@ var input, filter, coffeeList, coffee, a, i, txtValue;
 input = document.getElementById('search-bar');
 filter = input.value.toUpperCase();
 coffeeList = filteredCoffeeList;
-coffee = coffeeList.getElementsByTagName('h2');
+coffee = coffeeList.getElementsByClassName('coffee').getElementsByTagName('h2');
 
 // Loop through all list items, and hide those who don't match the search query
 for (i = 0; i < coffee.length; i++) {
@@ -73,7 +74,7 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var nameSelector= document.querySelector('#search-bar')
+
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
