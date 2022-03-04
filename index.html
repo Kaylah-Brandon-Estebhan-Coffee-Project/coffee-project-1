@@ -13,7 +13,7 @@
 <h1 style ="text-align: center">Coffee!</h1>
 <hr>
 <div class="d-flex">
-    <div class="order-6 col-6 ">
+    <div class="col-6 mx-1" id="form-background">
         <form class="d-flex flex-column">
             <label class="mb-0" for="roast-selection"><strong>Roast</strong></label>
             <select id="roast-selection" class="text-center mt-0 mb-2 p-1">
@@ -37,11 +37,11 @@
             </select>
             <label class="mb-0" for="new-coffee-name"><strong>Coffee Name</strong></label>
             <input type="text" id="new-coffee-name" class="mb-3"  placeholder="New coffee name">
-            <input id="submit2" class="btn-primary" type="submit" value="Add" />
+            <input id="submit2" class="btn-primary mb-3" type="submit" value="Add" />
 
         </form>
     </div>
-    <div class="col-6 row flex-wrap justify-content-between" id="coffees"></div>
+    <div class="col-6 row flex-wrap justify-content-between mx-0" id="coffees"></div>
 </div>
 
 

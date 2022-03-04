@@ -6,6 +6,7 @@ img {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 h5 {
@@ -27,3 +28,31 @@ p{
     border-radius: 3px;
 }
 
+body {
+    background-image: url("pexels-jason-villanueva-851555.jpg");
+    background-color: #cccccc;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h2 {
+    color: #8d7964;
+
+}
+
+h1 {
+    color: white;
+}
+
+.coffee-roast {
+    color: saddlebrown;
+}
+
+label {
+    color: #8d623c;
+}
+
+#form-background {
+    background: rgba(255, 255, 255, 0.5);
+
+}
