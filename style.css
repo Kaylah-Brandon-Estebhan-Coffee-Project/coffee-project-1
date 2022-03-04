@@ -14,6 +14,8 @@ td, th {
     flex-wrap: wrap;
 }
 
-h2 {
-    width: 50%;
+h5 {
+    background-color: hotpink;
+    margin-bottom: 0;
 }
+

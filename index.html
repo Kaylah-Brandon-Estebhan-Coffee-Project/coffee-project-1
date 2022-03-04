@@ -14,14 +14,29 @@
 <div class="d-flex">
     <div class="order-6 col-6 ">
     <form class="d-flex flex-column">
-        <label for="roast-selection"></label>
-        <select id="roast-selection" class="text-center">
+        <label class="mb-0"for="roast-selection"><strong>Roast</strong></label>
+        <select id="roast-selection" class="text-center mt-0">
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
         </select>
+        <label class="mb-0" for="search-bar"><strong>Coffee Name</strong></label>
         <input type="text" id="search-bar" onkeyup="updateCoffeeListByName()" placeholder="Search for names..">
-        <input id="submit" type="submit" />
+        <input id="submit" class="btn-primary" type="submit" />
+
+        </form>
+        <hr>
+        <h2 class ="mx-auto text-center">Add a Coffee</h2>
+        <form class="d-flex flex-column">
+            <label class="mb-0" for="new-roast"><strong>Roast</strong></label>
+            <select id="new-roast" class="text-center">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label class="mb-0" for="new-coffee-name"><strong>Coffee Name</strong></label>
+            <input type="text" id="new-coffee-name" onkeyup="updateCoffeeListByName()" placeholder="Search for names..">
+            <input id="submit2" class="btn-primary" type="submit" />
 
         </form>
     </div>
