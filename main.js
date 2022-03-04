@@ -39,7 +39,8 @@ function updateCoffeeListByName(){
     let y = document.getElementsByClassName('coffee-roast');
 
     for (var i = 0; i < x.length; i++) {
-        if (!x[i].innerText.toLowerCase().includes(input)) { x[i].style.display="none";
+        if (!x[i].innerText.toLowerCase().includes(input)) {
+            x[i].style.display="none";
             y[i].style.display='none';
         }
         else {

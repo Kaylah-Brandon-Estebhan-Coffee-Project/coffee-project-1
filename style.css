@@ -6,7 +6,8 @@ img {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /*background: rgba(0, 0, 0, 0.25);*/
+
+    background: rgba(124, 78, 37, 0.56);
 }
 
 h5 {
@@ -36,7 +37,7 @@ body {
 
 h2 {
     /*color: #93795e;*/
-    color: #4b1f0e;
+    color: #642d0b;
 }
 
 h1 {
@@ -48,11 +49,8 @@ h1 {
 
 .coffee-roast {
     color: #11e171;
-    padding: .2em;
+
     text-align: center;
-    /*background-color: rgb(147, 121, 94);*/
-    border:1px solid transparent;
-    border-radius: 1em;
 
 }
 
@@ -75,3 +73,8 @@ strong{
 label {
     padding: .5em;
 }
+
+.coffee-name{
+    color: #e7ad8d;
+}
+
