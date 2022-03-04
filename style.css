@@ -36,21 +36,36 @@ body {
 }
 
 h2 {
-    color: #8d7964;
+    color: #93795e;
 
 }
 
 h1 {
     color: white;
+    text-align: center;
+
 }
 
 .coffee-roast {
-    color: saddlebrown;
+    color: #64c792;
+    padding: .2em;
+    text-align: center;
+    background-color: rgb(147, 121, 94);
+    border:1px solid transparent;
+    border-radius: 1em;
+
 }
 
-label {
-    color: #8d623c;
+strong{
+    color:#64c792 ;
+    padding: .1em;
+    text-align: center;
+    background-color:rgb(147, 121, 94) ;
+    border:1px solid transparent;
+    border-radius: .3em;
 }
+
+
 
 #form-background {
     background: rgba(255, 255, 255, 0.5);
