@@ -24,10 +24,11 @@ function updateCoffees(e) {
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        } else if(selectedRoast === 'all'){
+            filteredCoffees = coffees
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
-
 
 }
 
