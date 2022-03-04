@@ -1,9 +1,9 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee d-flex col-6 align-items-baseline">';
-    html += '<h2>' + coffee.name + '</h2>';
-    html += '<p class="text-secondary">' + coffee.roast + '</p>';
+    var html = '<div class="coffee d-flex col-6 align-items-baseline ">';
+    html += '<h2 class="coffee-name">' + coffee.name + '</h2>';
+    html += '<p class="text-secondary coffee-roast">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -30,25 +30,40 @@ function renderCoffees(coffees) {
 
 
     }
-    var filteredCoffeeList = updateCoffees;
 
  function updateCoffeeListByName(){
      let input = document.getElementById('search-bar').value
      input=input.toLowerCase();
-     let x = document.getElementsByTagName('h2');
-     let y = document.getElementsByTagName('p');
+     let x = document.getElementsByClassName('coffee-name');
+     let y = document.getElementsByClassName('coffee-roast');
 
      for (var i = 0; i < x.length; i++) {
-         if (!x[i].innerHTML.toLowerCase().includes(input)) {
-             x[i].style.display="none";
+         if (!x[i].innerText.toLowerCase().includes(input)) { x[i].style.display="none";
              y[i].style.display='none';
          }
          else {
              x[i].style.display="";
              y[i].style.display="";
+
          }
      }
  }
+
+// var form = document.getElementById('form2');
+//
+// form.onsubmit = function(e){
+//     var  newRoast=document.getElementById('new-roast').value,
+//         newName=document.getElementById('new-coffee-name').value;
+//
+//     coffees.push({
+//         id:(coffees.length+1),
+//         name:newName,
+//         roast:newRoast});
+//
+//     tbody.innerHTML = renderCoffees(coffees);
+//
+//     e.preventDefault();
+// }
 // //
 // // // Declare variables
 // var input, filter, coffeeList, coffee, a, i, txtValue;
