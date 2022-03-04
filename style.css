@@ -6,11 +6,10 @@ img {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background: rgba(255, 255, 255, 0.5);
+    /*background: rgba(0, 0, 0, 0.25);*/
 }
 
 h5 {
-    background-color: hotpink;
     margin-bottom: 0;
 }
 
@@ -36,21 +35,22 @@ body {
 }
 
 h2 {
-    color: #93795e;
-
+    /*color: #93795e;*/
+    color: #4b1f0e;
 }
 
 h1 {
-    color: white;
+    /*color: white;*/
     text-align: center;
+    color: #BC6C25;
 
 }
 
 .coffee-roast {
-    color: #64c792;
+    color: #11e171;
     padding: .2em;
     text-align: center;
-    background-color: rgb(147, 121, 94);
+    /*background-color: rgb(147, 121, 94);*/
     border:1px solid transparent;
     border-radius: 1em;
 
@@ -60,7 +60,7 @@ strong{
     color:#64c792 ;
     padding: .1em;
     text-align: center;
-    background-color:rgb(147, 121, 94) ;
+    /*background-color:rgb(147, 121, 94) ;*/
     border:1px solid transparent;
     border-radius: .3em;
 }
@@ -68,6 +68,10 @@ strong{
 
 
 #form-background {
-    background: rgba(255, 255, 255, 0.5);
+    /*background: rgba(255, 255, 255, 0.5);*/
 
+}
+
+label {
+    padding: .5em;
 }
