@@ -17,7 +17,7 @@ function renderCoffees(coffees) {
     return html;
 }
 
-   function updateCoffees(e) {
+function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
@@ -29,41 +29,28 @@ function renderCoffees(coffees) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 
 
+}
+
+function updateCoffeeListByName(){
+    let input = document.getElementById('search-bar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('coffee-name');
+    let y = document.getElementsByClassName('coffee-roast');
+
+    for (var i = 0; i < x.length; i++) {
+        if (!x[i].innerText.toLowerCase().includes(input)) { x[i].style.display="none";
+            y[i].style.display='none';
+        }
+        else {
+            x[i].style.display="";
+            y[i].style.display="";
+
+        }
     }
+}
 
- function updateCoffeeListByName(){
-     let input = document.getElementById('search-bar').value
-     input=input.toLowerCase();
-     let x = document.getElementsByClassName('coffee-name');
-     let y = document.getElementsByClassName('coffee-roast');
 
-     for (var i = 0; i < x.length; i++) {
-         if (!x[i].innerText.toLowerCase().includes(input)) { x[i].style.display="none";
-             y[i].style.display='none';
-         }
-         else {
-             x[i].style.display="";
-             y[i].style.display="";
 
-         }
-     }
- }
-
-// var form = document.getElementById('form2');
-//
-// form.onsubmit = function(e){
-//     var  newRoast=document.getElementById('new-roast').value,
-//         newName=document.getElementById('new-coffee-name').value;
-//
-//     coffees.push({
-//         id:(coffees.length+1),
-//         name:newName,
-//         roast:newRoast});
-//
-//     tbody.innerHTML = renderCoffees(coffees);
-//
-//     e.preventDefault();
-// }
 // //
 // // // Declare variables
 // var input, filter, coffeeList, coffee, a, i, txtValue;
@@ -105,8 +92,26 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var form = document.getElementById('submit2');
 
 tbody.innerHTML = renderCoffees(coffees);
 
+
+function addCoffee(e){
+    var  newRoast=document.getElementById('new-roast').value,
+        newName=document.getElementById('new-coffee-name').value;
+
+    coffees.push({
+        id:(coffees.length+1),
+        name:newName,
+        roast:newRoast});
+
+    tbody.innerHTML = renderCoffees(coffees);
+
+
+    e.preventDefault()
+}
+
+form.addEventListener('click',addCoffee)
 submitButton.addEventListener('click', updateCoffees);
 document.getElementById('search-bar').addEventListener('keyup',updateCoffeeListByName);
