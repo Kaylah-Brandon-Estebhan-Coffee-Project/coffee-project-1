@@ -19,3 +19,17 @@ h5 {
     margin-bottom: 0;
 }
 
+p{
+    padding-left: .5em;
+}
+
+#submit {
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+#submit2 {
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
